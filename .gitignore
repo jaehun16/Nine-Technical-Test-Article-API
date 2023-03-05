@@ -1,0 +1,123 @@
+# JetBrains IDEs
+.idea
+*.iml
+atlassian-ide-plugin.xml
+
+# Eclipse IDE
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.classpath
+.recommenders
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Visual Studio
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Golang
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+### Go Patch ###
+/vendor/
+/Godeps/
+
+# Java
+*.class
+bin
+target
+temp-output
+build/
+.gradle
+.mvn/*
+LOG_FILE_IS_UNDEFINED
+.springBeans
+.checkstyle
+
+# Other
+*.log
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Javacript
+logs
+**/*.backup.*
+**/*.back.*
+node_modules
+bower_components
+npm-debug.log
+
+# Operating System Files
+*.DS_Store
+Thumbs.db
