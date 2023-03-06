@@ -35,10 +35,6 @@ public class TagArticles {
         this.count = count;
     }
 
-    public void addCount(final int count) {
-        this.count += count;
-    }
-
     public List<String> getArticles() {
         return articles;
     }

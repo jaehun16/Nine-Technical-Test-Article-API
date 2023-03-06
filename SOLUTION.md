@@ -82,9 +82,7 @@ The case without data means the article is today.
 * Larger IDs are more recent articles
 
 ### GET API `/tags/{tagName}/{date}`
-1. This api will query all articles on the given date.
-2. It'll count the number of the all tags of all the articles and store it at count field.
-3. It'll list up tags that are on the articles which has the given tag. 
-The related_tags field contains a list of tags excluding the given tag.
-4. It'll list the most recent 10 articles among the viewed articles and select articles that has the given tag. 
-The articles field contains a list of ids of selected articles.
+* All the fields in the result are a summary of the given date and tag
+* related_tags field is a list of tags that are on the articles which contains the current tag on the given day.
+* count field shows the count for the tag ("health") appearance on the given day.
+* articles field is a list of ids for the last (0-10) articles that contain the current tag on the given day.

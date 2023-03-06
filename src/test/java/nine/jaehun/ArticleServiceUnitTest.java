@@ -48,7 +48,7 @@ public class ArticleServiceUnitTest {
         final TagArticles tagArticles = articleService.findByTagnameAndDate(tags[2], date);
         assertThat(tagArticles).isNotNull();
         assertThat(tagArticles.getTag()).isEqualTo(tags[2]);
-        assertThat(tagArticles.getCount()).isEqualTo(7);
+        assertThat(tagArticles.getCount()).isEqualTo(2);
         assertThat(tagArticles.getArticles().size()).isEqualTo(2);
         assertThat(tagArticles.getRelated_tags().size()).isEqualTo(3);
 

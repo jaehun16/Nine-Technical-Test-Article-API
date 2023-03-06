@@ -62,7 +62,7 @@ class ApplicationTests {
         TagArticles tagArticles = mapper.readValue(response.getBody(), TagArticles.class);
         assertThat(tagArticles).isNotNull();
         assertThat(tagArticles.getTag()).isEqualTo(tagName);
-        assertThat(tagArticles.getCount()).isEqualTo(7);
+        assertThat(tagArticles.getCount()).isEqualTo(2);
         assertThat(tagArticles.getArticles().size()).isEqualTo(2);
         assertThat(tagArticles.getRelated_tags().size()).isEqualTo(3);
 
@@ -73,7 +73,7 @@ class ApplicationTests {
         tagArticles = mapper.readValue(response.getBody(), TagArticles.class);
         assertThat(tagArticles).isNotNull();
         assertThat(tagArticles.getTag()).isEqualTo(tagName);
-        assertThat(tagArticles.getCount()).isEqualTo(7);
+        assertThat(tagArticles.getCount()).isEqualTo(1);
         assertThat(tagArticles.getArticles().size()).isEqualTo(1);
         assertThat(tagArticles.getRelated_tags().size()).isEqualTo(1);
     }
@@ -103,8 +103,8 @@ class ApplicationTests {
         tagArticles = mapper.readValue(response.getBody(), TagArticles.class);
         assertThat(tagArticles).isNotNull();
         assertThat(tagArticles.getTag()).isEqualTo(tagName);
-        assertThat(tagArticles.getCount()).isEqualTo(26);
-        assertThat(tagArticles.getArticles().size()).isEqualTo(4);
+        assertThat(tagArticles.getCount()).isEqualTo(5);
+        assertThat(tagArticles.getArticles().size()).isEqualTo(5);
         assertThat(tagArticles.getRelated_tags().size()).isEqualTo(3);
 
         tagName = "health";
@@ -114,8 +114,8 @@ class ApplicationTests {
         tagArticles = mapper.readValue(response.getBody(), TagArticles.class);
         assertThat(tagArticles).isNotNull();
         assertThat(tagArticles.getTag()).isEqualTo(tagName);
-        assertThat(tagArticles.getCount()).isEqualTo(26);
-        assertThat(tagArticles.getArticles().size()).isEqualTo(1);
+        assertThat(tagArticles.getCount()).isEqualTo(3);
+        assertThat(tagArticles.getArticles().size()).isEqualTo(3);
         assertThat(tagArticles.getRelated_tags().size()).isEqualTo(4);
 
         tagName = "science";
@@ -125,8 +125,8 @@ class ApplicationTests {
         tagArticles = mapper.readValue(response.getBody(), TagArticles.class);
         assertThat(tagArticles).isNotNull();
         assertThat(tagArticles.getTag()).isEqualTo(tagName);
-        assertThat(tagArticles.getCount()).isEqualTo(26);
-        assertThat(tagArticles.getArticles().size()).isEqualTo(4);
+        assertThat(tagArticles.getCount()).isEqualTo(6);
+        assertThat(tagArticles.getArticles().size()).isEqualTo(6);
         assertThat(tagArticles.getRelated_tags().size()).isEqualTo(4);
 
         tagName = "fitness";
@@ -136,8 +136,8 @@ class ApplicationTests {
         tagArticles = mapper.readValue(response.getBody(), TagArticles.class);
         assertThat(tagArticles).isNotNull();
         assertThat(tagArticles.getTag()).isEqualTo(tagName);
-        assertThat(tagArticles.getCount()).isEqualTo(26);
-        assertThat(tagArticles.getArticles().size()).isEqualTo(5);
+        assertThat(tagArticles.getCount()).isEqualTo(6);
+        assertThat(tagArticles.getArticles().size()).isEqualTo(6);
         assertThat(tagArticles.getRelated_tags().size()).isEqualTo(4);
     }
 
@@ -146,7 +146,7 @@ class ApplicationTests {
                 {},
                 {"health", "fitness", "science"},
                 {"health", "business"},
-                {"science", "art"},  // more than 10
+                {"science", "art"},
                 {"health", "policy"},
                 {"fitness", "science"},
                 {"art"},
