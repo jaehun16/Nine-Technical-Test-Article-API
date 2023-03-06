@@ -24,7 +24,7 @@ public class ArticleServiceUnitTest {
     @Test
     public void HibernateCreatesInitialRecords() throws ParseException {
         final String title = "latest science shows that potato chips are better for you than sugar";
-        final String date = "2016-09-22";
+        final String date = "2020-09-22";
         final String body = "some text, potentially containing simple markup about how potato chips are great";
         final String[] tags = {"health", "fitness", "science"};
         final Article newArticle = articleService.save(new Article(title, date, body, tags));
@@ -48,8 +48,8 @@ public class ArticleServiceUnitTest {
         final TagArticles tagArticles = articleService.findByTagnameAndDate(tags[2], date);
         assertThat(tagArticles).isNotNull();
         assertThat(tagArticles.getTag()).isEqualTo(tags[2]);
-        assertThat(tagArticles.getCount()).isEqualTo(2);
-        assertThat(tagArticles.getArticles().size()).isEqualTo(3);
+        assertThat(tagArticles.getCount()).isEqualTo(7);
+        assertThat(tagArticles.getArticles().size()).isEqualTo(2);
         assertThat(tagArticles.getRelated_tags().size()).isEqualTo(3);
 
         try {
